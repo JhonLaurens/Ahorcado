@@ -2,9 +2,9 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: '/Ahorcado/',
+  base: command === 'build' ? '/Ahorcado/' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -17,4 +17,4 @@ export default defineConfig({
       }
     }
   }
-})
+}))
