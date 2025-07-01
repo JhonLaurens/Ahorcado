@@ -6,6 +6,13 @@ Un juego del ahorcado moderno construido con **React 18**, **Vite**, y **SQLite*
 ![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite)
 ![SQLite](https://img.shields.io/badge/SQLite-WASM-003B57?style=for-the-badge&logo=sqlite)
 
+[![Deploy to GitHub Pages](https://github.com/JhonLaurens/Ahorcado/actions/workflows/deploy.yml/badge.svg)](https://github.com/JhonLaurens/Ahorcado/actions/workflows/deploy.yml)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-success?style=flat-square)](https://jhonlaurens.github.io/Ahorcado/)
+
+## 🚀 Demo en Vivo
+
+**¡Juega ahora!** 👉 [https://jhonlaurens.github.io/Ahorcado/](https://jhonlaurens.github.io/Ahorcado/)
+
 ## ✨ Características
 
 ### 🎮 Mecánicas de Juego

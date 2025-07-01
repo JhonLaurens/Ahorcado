@@ -1,11 +1,19 @@
 {
   "name": "hangman-game",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "description": "Juego del Ahorcado construido con React, Vite y SQLite. Incluye timer, leaderboard y base de datos local.",
   "type": "module",
   "keywords": ["hangman", "react", "vite", "sqlite", "game", "ahorcado"],
-  "author": "Hangman Game Team",
+  "author": "JhonLaurens",
+  "homepage": "https://jhonlaurens.github.io/Ahorcado/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JhonLaurens/Ahorcado.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JhonLaurens/Ahorcado/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
