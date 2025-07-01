@@ -1,0 +1,168 @@
+/* WordDisplay.css - Word display styling */
+
+.word-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  min-height: 120px;
+  justify-content: center;
+}
+
+.word-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+}
+
+.word-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 60px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  text-transform: uppercase;
+}
+
+.word-letter.revealed {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: 3px solid #667eea;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  transform: scale(1.05) rotateY(0deg);
+  animation: letterReveal 0.6s ease-out;
+}
+
+.word-letter.hidden {
+  background: #f8f9fa;
+  border: 3px solid #dee2e6;
+  color: transparent;
+  position: relative;
+}
+
+.word-letter.hidden::before {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 4px;
+  background: #667eea;
+  border-radius: 2px;
+}
+
+.word-letter.shake {
+  animation: letterShakeIntense 1s ease-in-out;
+}
+
+@keyframes letterReveal {
+  0% {
+    transform: scale(0.8) rotateY(-90deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.15) rotateY(-45deg);
+  }
+  100% {
+    transform: scale(1.05) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes letterShakeIntense {
+  0%, 100% { transform: translateX(0) scale(1); }
+  10% { transform: translateX(-8px) scale(1.05); }
+  20% { transform: translateX(8px) scale(0.95); }
+  30% { transform: translateX(-6px) scale(1.02); }
+  40% { transform: translateX(6px) scale(0.98); }
+  50% { transform: translateX(-4px) scale(1.01); }
+  60% { transform: translateX(4px) scale(0.99); }
+  70% { transform: translateX(-2px) scale(1.005); }
+  80% { transform: translateX(2px) scale(0.995); }
+  90% { transform: translateX(-1px) scale(1); }
+}
+
+.word-info {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.word-length,
+.letters-found {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 15px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.word-length::before {
+  content: '📏';
+  font-size: 1.1rem;
+}
+
+.letters-found::before {
+  content: '✅';
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .word-display {
+    padding: 20px;
+    min-height: 100px;
+  }
+  
+  .word-container {
+    gap: 8px;
+  }
+  
+  .word-letter {
+    width: 40px;
+    height: 50px;
+    font-size: 1.8rem;
+  }
+  
+  .word-letter.hidden::before {
+    width: 24px;
+    height: 3px;
+    bottom: 6px;
+  }
+  
+  .word-info {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .word-letter {
+    width: 35px;
+    height: 45px;
+    font-size: 1.6rem;
+  }
+  
+  .word-container {
+    gap: 6px;
+  }
+}
